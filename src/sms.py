@@ -14,14 +14,14 @@ def send_sms(to, body):
 
     account_sid = os.environ["TWILIO_ACCOUNT_SID"]
     auth_token = os.environ["TWILIO_AUTH_TOKEN"]
-    twilio_phone_number = "+18662507453"
+
     # Initialize Twilio Client
     client = Client(account_sid, auth_token)
 
     # Send SMS
     message = client.messages.create(
         body=body,
-        from_= twilio_phone_number,
+        from_= "+18662507453",
         to=to,
     )
 
